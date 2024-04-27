@@ -1,0 +1,21 @@
+* {
+  /* font-family: "Typedeer Mono", cursive !important; */
+  font-family: "Nourd-Heavy", cursive !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #002D33; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #26408d; 
+  border-radius: 20px;
+}
+
+ 
