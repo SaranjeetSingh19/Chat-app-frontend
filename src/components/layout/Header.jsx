@@ -101,9 +101,12 @@ const Header = () => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 ,
-    
-      }} height={"3.8rem"}>
+      <Box
+        sx={{
+          display: { xs: "inline", sm: "inline", marginBottom: "1rem" },
+        }}
+        height={"3.8rem"}
+      >
         <AppBar
           position="static"
           sx={{
@@ -115,11 +118,9 @@ const Header = () => {
               display: {
                 xs: "flex",
                 padding: "0rem",
-                
               },
             }}
           >
-            
             <Stack
               sx={{
                 backgroundImage: 'url("/only_pm_logo.png")',
@@ -130,7 +131,7 @@ const Header = () => {
                   xs: "flex",
                   height: "2.2rem",
                   width: "2.2rem",
-                }
+                },
               }}
               onClick={moveToHome}
             ></Stack>
@@ -159,27 +160,37 @@ const Header = () => {
                 display: { xs: "block", sm: "none" },
               }}
             >
-              <IconButton color="inherit" onClick={handleMobileProfile}>
+              <IconButton
+                
+                color="inherit"
+                onClick={handleMobileProfile}
+              >
                 <Person4 />
               </IconButton>
             </Box>
-
-            <Box sx={{ flexGrow: 1 }} />
-            <Box>
+            <Box sx={{ flexGrow: 1 , padding: "1rem"}} />
+            <Box sx={{ marginLeft: "-3.5rem" ,  display: {
+              xs: "block"
+            }}}>
               <Tooltip title="Search">
-                <IconButton color="inherit" size="large" onClick={openSearch}>
+                <IconButton 
+                sx={{marginRight: "-0.5rem"}}
+                color="inherit" size="large" onClick={openSearch}>
                   <SearchIcon />
                 </IconButton>
               </Tooltip>
 
               <Tooltip title="New Group">
-                <IconButton color="inherit" size="large" onClick={openNewGroup}>
+                <IconButton 
+                sx={{marginRight: "-0.4rem"}}
+                color="inherit" size="large" onClick={openNewGroup}>
                   <AddIcon />
                 </IconButton>
               </Tooltip>
 
               <Tooltip title="Manage Groups">
                 <IconButton
+                sx={{marginRight: "-0.3rem"}}
                   color="inherit"
                   size="large"
                   onClick={navigateToGroup}
@@ -193,10 +204,14 @@ const Header = () => {
                 icon={<NotificationsIcon />}
                 onClick={openNotification}
                 value={notificationCount}
+                
               />
 
               <Tooltip title="Logout">
-                <IconButton color="inherit" size="large" onClick={handleLogout}>
+                <IconButton 
+              sx={{marginLeft: "-0.3rem"}}
+                
+                color="inherit" size="large" onClick={handleLogout}>
                   <LogoutIcon />
                 </IconButton>
               </Tooltip>
@@ -204,6 +219,8 @@ const Header = () => {
           </Toolbar>
         </AppBar>
       </Box>
+
+
 
       {isSearch && (
         <Suspense fallback={<Backdrop open />}>
