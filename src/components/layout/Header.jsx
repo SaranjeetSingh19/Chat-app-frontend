@@ -76,8 +76,6 @@ const Header = () => {
     }
   };
 
-  
-
   const navigateToGroup = () => navigate("/groups");
   const moveToAdmin = () => navigate("/adminPanel2590");
   const moveToHome = () => navigate("/");
@@ -103,21 +101,36 @@ const Header = () => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }} height={"4rem"}>
+      <Box sx={{ flexGrow: 1 ,
+    
+      }} height={"3.8rem"}>
         <AppBar
           position="static"
           sx={{
             bgcolor: "#00242D",
           }}
         >
-          <Toolbar>
-          
+          <Toolbar
+            sx={{
+              display: {
+                xs: "flex",
+                padding: "0rem",
+                
+              },
+            }}
+          >
+            
             <Stack
               sx={{
                 backgroundImage: 'url("/only_pm_logo.png")',
                 backgroundSize: "cover",
                 height: "3.2rem",
                 width: "3.2rem",
+                display: {
+                  xs: "flex",
+                  height: "2.2rem",
+                  width: "2.2rem",
+                }
               }}
               onClick={moveToHome}
             ></Stack>
@@ -141,7 +154,11 @@ const Header = () => {
               </IconButton>
             </Box>
 
-            <Box sx={{ display: { xs: "block", sm: "none" } }}>
+            <Box
+              sx={{
+                display: { xs: "block", sm: "none" },
+              }}
+            >
               <IconButton color="inherit" onClick={handleMobileProfile}>
                 <Person4 />
               </IconButton>

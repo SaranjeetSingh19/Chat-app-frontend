@@ -1,7 +1,16 @@
-* {
-  /* font-family: "Typedeer Mono", cursive !important; */
-  font-family: "Nourd-Heavy", cursive !important;
+@font-face {
+  font-family: 'Nourd-Medium';
+  src: url('../public/nourd_medium.woff') format('woff');
+  /* Add more src lines for different font formats if necessary */
 }
+
+ 
+* {
+  font-family: 'Nourd-Medium', "Gilroy ExtraBold", "Roboto Flex" !important;
+}
+
+
+
 
 ::-webkit-scrollbar {
   width: 10px;
